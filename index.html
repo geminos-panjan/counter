@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css?17fa572">
+</head>
+<body>
+  <div class="title">Counter</div>
+  <div class="contents">
+    <div class="counter">
+      <div class="control">
+        <button onclick="setNum(0)">Reset</button>
+      </div>
+      <div class="main">
+        <button class="change-button"
+          onpointerdown="pointerdownChangeNum(-10)"
+          onpointerup="pointerupChangeNum()"
+        >-10</button>
+        <button class="change-button"
+          onpointerdown="pointerdownChangeNum(-1)"
+          onpointerup="pointerupChangeNum()"
+        >-1</button>
+        <div class="count-num"></div>
+          <button class="change-button"
+          onpointerdown="pointerdownChangeNum(1)"
+          onpointerup="pointerupChangeNum()"
+        >+1</button>
+        <button class="change-button"
+          onpointerdown="pointerdownChangeNum(10)"
+          onpointerup="pointerupChangeNum()"
+        >+10</button>
+      </div>
+    </div>
+  </div>
+  <div class="copy">&copy;&nbsp;2022&nbsp;
+    <a href="https://github.com/geminos-panjan" target="_blank"
+      rel="noopener noreferrer">geminos-panjan</a>
+  </div>
+<script src="./app.js?17fa572"></script>
+</body>
+</html>

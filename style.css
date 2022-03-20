@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  --header-height: 52px;
+  --footer-height: 52px;
+  --theme-color: hsl(270, 30%, 50%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a:link,
+a:visited {
+  color: navy;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:active {
+  color: red;
+}
+
+.title {
+  background-color: var(--theme-color);
+  text-align: center;
+  height: var(--header-height);
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  box-sizing: border-box;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  min-height: calc(100% - var(--header-height) - var(--footer-height));
+}
+
+.copy {
+  text-align: center;
+  background-color: hsl(0, 0%, 85%);
+  height: var(--footer-height);
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+.counter .control {
+  margin: 0 8px 8px 0;
+}
+
+.counter .control>button {
+  background-color: hsl(280, 100%, 90%);
+}
+
+.counter .main {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.counter .main>div, .main>button {
+  margin-right: 8px;
+}
+
+.counter button {
+  appearance: none;
+  border: 3px solid var(--theme-color);
+  border-radius: 4px;
+  background-color: unset;
+  min-width: 3em;
+  user-select: none;
+}
+
+.counter button:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.counter button:active {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.count-num {
+  min-width: 3ch;
+  text-align: right;
+  font-size: larger;
+}
