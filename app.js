@@ -1,6 +1,7 @@
 const timeLongPress = 500;
 const timeInterval = 62.5;
 
+let isHovered = false;
 let isPressedLong = false;
 let timer = 0;
 
@@ -17,16 +18,25 @@ const setNum = (num) => {
   getCounter().textContent = String(num);
 }
 
+const pointerEnter = () => {
+  isHovered = true;
+};
+
+const pointerLeave = () => {
+  isHovered = false;
+  isPressedLong = false;
+};
+
 const pointerdownChangeNum = (num) => {
   const timeout = isPressedLong ? timeInterval : timeLongPress;
 
-  if (!isPressedLong) {
+  if (!isPressedLong && isHovered) {
     setNum(getNum() + num);
     isPressedLong = true;
   }
 
   timer = setTimeout(() => {
-    if (isPressedLong) {
+    if (isPressedLong && isHovered) {
       setNum(getNum() + num);
       pointerdownChangeNum(num);
     }
